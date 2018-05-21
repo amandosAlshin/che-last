@@ -1,0 +1,688 @@
+@font-face {
+  font-family: "MullerBlack";
+  src: url("fonts/MullerWeb/MullerBlack/MullerBlack.eot?") format("eot"), url("fonts/MullerWeb/MullerBlack/MullerBlack.woff2") format("woff2"), url("fonts/MullerWeb/MullerBlack/MullerBlack.woff") format("woff"), url("fonts/MullerWeb/MullerBlack/MullerBlack.ttf") format("truetype"), url("fonts/MullerWeb/MullerBlack/MullerBlack.svg#MullerBlack") format("svg"); }
+
+@font-face {
+  font-family: "MullerBlackItalic";
+  src: url("fonts/MullerWeb/MullerBlackItalic/MullerBlackItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerBlackItalic/MullerBlackItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerBlackItalic/MullerBlackItalic.woff") format("woff"), url("fonts/MullerWeb/MullerBlackItalic/MullerBlackItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerBlackItalic/MullerBlackItalic.svg#MullerBlackItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerBold";
+  src: url("fonts/MullerWeb/MullerBold/MullerBold.eot?") format("eot"), url("fonts/MullerWeb/MullerBold/MullerBold.woff2") format("woff2"), url("fonts/MullerWeb/MullerBold/MullerBold.woff") format("woff"), url("fonts/MullerWeb/MullerBold/MullerBold.ttf") format("truetype"), url("fonts/MullerWeb/MullerBold/MullerBold.svg#MullerBold") format("svg"); }
+
+@font-face {
+  font-family: "MullerBoldItalic";
+  src: url("fonts/MullerWeb/MullerBoldItalic/MullerBoldItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerBoldItalic/MullerBoldItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerBoldItalic/MullerBoldItalic.woff") format("woff"), url("fonts/MullerWeb/MullerBoldItalic/MullerBoldItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerBoldItalic/MullerBoldItalic.svg#MullerBoldItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerExtraBold";
+  src: url("fonts/MullerWeb/MullerExtraBold/MullerExtraBold.eot?") format("eot"), url("fonts/MullerWeb/MullerExtraBold/MullerExtraBold.woff2") format("woff2"), url("fonts/MullerWeb/MullerExtraBold/MullerExtraBold.woff") format("woff"), url("fonts/MullerWeb/MullerExtraBold/MullerExtraBold.ttf") format("truetype"), url("fonts/MullerWeb/MullerExtraBold/MullerExtraBold.svg#MullerExtraBold") format("svg"); }
+
+@font-face {
+  font-family: "MullerExtraBoldItalic";
+  src: url("fonts/MullerWeb/MullerExtraBoldItalic/MullerExtraBoldItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerExtraBoldItalic/MullerExtraBoldItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerExtraBoldItalic/MullerExtraBoldItalic.woff") format("woff"), url("fonts/MullerWeb/MullerExtraBoldItalic/MullerExtraBoldItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerExtraBoldItalic/MullerExtraBoldItalic.svg#MullerExtraBoldItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerHairline";
+  src: url("fonts/MullerWeb/MullerHairline/MullerHairline.eot?") format("eot"), url("fonts/MullerWeb/MullerHairline/MullerHairline.woff2") format("woff2"), url("fonts/MullerWeb/MullerHairline/MullerHairline.woff") format("woff"), url("fonts/MullerWeb/MullerHairline/MullerHairline.ttf") format("truetype"), url("fonts/MullerWeb/MullerHairline/MullerHairline.svg#MullerHairline") format("svg"); }
+
+@font-face {
+  font-family: "MullerHairlineItalic";
+  src: url("fonts/MullerWeb/MullerHairlineItalic/MullerHairlineItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerHairlineItalic/MullerHairlineItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerHairlineItalic/MullerHairlineItalic.woff") format("woff"), url("fonts/MullerWeb/MullerHairlineItalic/MullerHairlineItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerHairlineItalic/MullerHairlineItalic.svg#MullerHairlineItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerHeavy";
+  src: url("fonts/MullerWeb/MullerHeavy/MullerHeavy.eot?") format("eot"), url("fonts/MullerWeb/MullerHeavy/MullerHeavy.woff2") format("woff2"), url("fonts/MullerWeb/MullerHeavy/MullerHeavy.woff") format("woff"), url("fonts/MullerWeb/MullerHeavy/MullerHeavy.ttf") format("truetype"), url("fonts/MullerWeb/MullerHeavy/MullerHeavy.svg#MullerHeavy") format("svg"); }
+
+@font-face {
+  font-family: "MullerHeavyItalic";
+  src: url("fonts/MullerWeb/MullerHeavyItalic/MullerHeavyItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerHeavyItalic/MullerHeavyItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerHeavyItalic/MullerHeavyItalic.woff") format("woff"), url("fonts/MullerWeb/MullerHeavyItalic/MullerHeavyItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerHeavyItalic/MullerHeavyItalic.svg#MullerHeavyItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerLight";
+  src: url("fonts/MullerWeb/MullerLight/MullerLight.eot?") format("eot"), url("fonts/MullerWeb/MullerLight/MullerLight.woff2") format("woff2"), url("fonts/MullerWeb/MullerLight/MullerLight.woff") format("woff"), url("fonts/MullerWeb/MullerLight/MullerLight.ttf") format("truetype"), url("fonts/MullerWeb/MullerLight/MullerLight.svg#MullerLight") format("svg"); }
+
+@font-face {
+  font-family: "MullerLightItalic";
+  src: url("fonts/MullerWeb/MullerLightItalic/MullerLightItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerLightItalic/MullerLightItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerLightItalic/MullerLightItalic.woff") format("woff"), url("fonts/MullerWeb/MullerLightItalic/MullerLightItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerLightItalic/MullerLightItalic.svg#MullerLightItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerMedium";
+  src: url("fonts/MullerWeb/MullerMedium/MullerMedium.eot?") format("eot"), url("fonts/MullerWeb/MullerMedium/MullerMedium.woff2") format("woff2"), url("fonts/MullerWeb/MullerMedium/MullerMedium.woff") format("woff"), url("fonts/MullerWeb/MullerMedium/MullerMedium.ttf") format("truetype"), url("fonts/MullerWeb/MullerMedium/MullerMedium.svg#MullerMedium") format("svg"); }
+
+@font-face {
+  font-family: "MullerMediumItalic";
+  src: url("fonts/MullerWeb/MullerMediumItalic/MullerMediumItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerMediumItalic/MullerMediumItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerMediumItalic/MullerMediumItalic.woff") format("woff"), url("fonts/MullerWeb/MullerMediumItalic/MullerMediumItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerMediumItalic/MullerMediumItalic.svg#MullerMediumItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerRegular";
+  src: url("fonts/MullerWeb/MullerRegular/MullerRegular.eot?") format("eot"), url("fonts/MullerWeb/MullerRegular/MullerRegular.woff2") format("woff2"), url("fonts/MullerWeb/MullerRegular/MullerRegular.woff") format("woff"), url("fonts/MullerWeb/MullerRegular/MullerRegular.ttf") format("truetype"), url("fonts/MullerWeb/MullerRegular/MullerRegular.svg#MullerRegular") format("svg"); }
+
+@font-face {
+  font-family: "MullerRegularItalic";
+  src: url("fonts/MullerWeb/MullerRegularItalic/MullerRegularItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerRegularItalic/MullerRegularItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerRegularItalic/MullerRegularItalic.woff") format("woff"), url("fonts/MullerWeb/MullerRegularItalic/MullerRegularItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerRegularItalic/MullerRegularItalic.svg#MullerRegularItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerThin";
+  src: url("fonts/MullerWeb/MullerThin/MullerThin.eot?") format("eot"), url("fonts/MullerWeb/MullerThin/MullerThin.woff2") format("woff2"), url("fonts/MullerWeb/MullerThin/MullerThin.woff") format("woff"), url("fonts/MullerWeb/MullerThin/MullerThin.ttf") format("truetype"), url("fonts/MullerWeb/MullerThin/MullerThin.svg#MullerThin") format("svg"); }
+
+@font-face {
+  font-family: "MullerThinItalic";
+  src: url("fonts/MullerWeb/MullerThinItalic/MullerThinItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerThinItalic/MullerThinItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerThinItalic/MullerThinItalic.woff") format("woff"), url("fonts/MullerWeb/MullerThinItalic/MullerThinItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerThinItalic/MullerThinItalic.svg#MullerThinItalic") format("svg"); }
+
+@font-face {
+  font-family: "MullerUltraLight";
+  src: url("fonts/MullerWeb/MullerUltraLight/MullerUltraLight.eot?") format("eot"), url("fonts/MullerWeb/MullerUltraLight/MullerUltraLight.woff2") format("woff2"), url("fonts/MullerWeb/MullerUltraLight/MullerUltraLight.woff") format("woff"), url("fonts/MullerWeb/MullerUltraLight/MullerUltraLight.ttf") format("truetype"), url("fonts/MullerWeb/MullerUltraLight/MullerUltraLight.svg#MullerUltraLight") format("svg"); }
+
+@font-face {
+  font-family: "MullerUltraLightItalic";
+  src: url("fonts/MullerWeb/MullerUltraLightItalic/MullerUltraLightItalic.eot?") format("eot"), url("fonts/MullerWeb/MullerUltraLightItalic/MullerUltraLightItalic.woff2") format("woff2"), url("fonts/MullerWeb/MullerUltraLightItalic/MullerUltraLightItalic.woff") format("woff"), url("fonts/MullerWeb/MullerUltraLightItalic/MullerUltraLightItalic.ttf") format("truetype"), url("fonts/MullerWeb/MullerUltraLightItalic/MullerUltraLightItalic.svg#MullerUltraLightItalic") format("svg"); }
+
+@font-face {
+  font-family: "Europe";
+  src: url("fonts/EuropeWeb/Europe/Europe.eot?") format("eot"), url("fonts/EuropeWeb/Europe/Europe.woff2") format("woff2"), url("fonts/EuropeWeb/Europe/Europe.woff") format("woff"), url("fonts/EuropeWeb/Europe/Europe.ttf") format("truetype"), url("fonts/EuropeWeb/Europe/Europe.svg#Europe") format("svg"); }
+
+@font-face {
+  font-family: "RuSbylyajka";
+  src: url("fonts/DKBlackBamboo/RuSbylyajka/RuSbylyajka.eot?") format("eot"), url("fonts/DKBlackBamboo/RuSbylyajka/RuSbylyajka.woff2") format("woff2"), url("fonts/DKBlackBamboo/RuSbylyajka/RuSbylyajka.woff") format("woff"), url("fonts/DKBlackBamboo/RuSbylyajka/RuSbylyajka.ttf") format("truetype"), url("fonts/DKBlackBamboo/RuSbylyajka/RuSbylyajka.svg#RuSbylyajka") format("svg"); }
+
+body {
+  background-color: white;
+  overflow-x: hidden;
+  padding: 10px 0; }
+
+ul.nav li.nav-item a.nav-link {
+  font-family: MullerMedium;
+  color: #141515;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: left;
+  display: inline-block;
+  border-radius: 0; }
+  ul.nav li.nav-item a.nav-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 2px solid #fdc900; }
+
+ul.nav li.nav-item a.nav-link.active {
+  background: transparent;
+  text-decoration: none;
+  border-bottom: 2px solid #fdc900; }
+
+ul.social {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+  ul.social li {
+    float: left;
+    list-style: none; }
+
+ul.horizontal-list {
+  margin: 0;
+  padding: 0; }
+  ul.horizontal-list li {
+    color: #fdc900;
+    margin-left: 25px;
+    float: left; }
+    ul.horizontal-list li:first-child {
+      margin: 0;
+      list-style: none; }
+    ul.horizontal-list li span {
+      color: #000000; }
+
+table, tr, td {
+  border-top: 1px solid black; }
+
+.order-shirts {
+  border-left: 10px solid #ececec; }
+  .order-shirts h3 {
+    font-family: MullerBold;
+    color: #050809;
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 33px; }
+
+table.contact-list td {
+  padding: 7px 8px; }
+
+.menu-category {
+  border-radius: 0; }
+  .menu-category a:hover {
+    text-decoration: none; }
+  .menu-category img {
+    padding: 8px; }
+  .menu-category h5 {
+    font-family: MullerBold;
+    color: #000102;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify; }
+  .menu-category .card-body {
+    padding: 0; }
+  .menu-category:hover {
+    cursor: pointer; }
+
+.menu-item {
+  border-radius: 0; }
+  .menu-item img {
+    padding: 8px; }
+  .menu-item h5.card-title {
+    font-size: 16px;
+    font-family: MullerBold;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-align: left; }
+  .menu-item span {
+    font-size: 10px;
+    color: #817f7d;
+    font-family: MullerRegular;
+    line-height: 1.5; }
+  .menu-item p.description {
+    font-size: 12px;
+    line-height: 14px;
+    display: none;
+    font-family: MullerRegular; }
+  .menu-item:hover {
+    cursor: pointer;
+    z-index: 2;
+    position: absolute; }
+    .menu-item:hover p.description {
+      display: block; }
+  .menu-item .card-footer {
+    overflow: hidden;
+    border-radius: 0;
+    padding: 0 !important; }
+    .menu-item .card-footer .row {
+      margin: 0; }
+      .menu-item .card-footer .row .col-md-4 {
+        padding: 0; }
+      .menu-item .card-footer .row .col-md-6 {
+        padding: 0; }
+    .menu-item .card-footer .btn {
+      width: 100%;
+      border-radius: 0; }
+    .menu-item .card-footer .col-md-6 .btn-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .menu-item .card-footer .col-md-6 .btn-group .btn {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
+
+.row.order input {
+  border-radius: 0; }
+
+.row.order textarea {
+  border-radius: 0; }
+
+.row.order .btn {
+  width: 100%;
+  border-radius: 0; }
+
+.row.order .total-order {
+  width: 100%;
+  height: auto; }
+  .row.order .total-order .form-control {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    background-color: #ececec; }
+  .row.order .total-order ul {
+    margin: 0;
+    padding: 15px 10px; }
+    .row.order .total-order ul li {
+      list-style: none;
+      font-family: Europe;
+      color: #060809;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: left; }
+
+.basket-item h4 {
+  font-family: MullerBold;
+  color: #000102;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 2px; }
+
+.basket-item .price {
+  text-align: right; }
+  .basket-item .price span {
+    font-family: MullerBold;
+    color: #000102;
+    font-size: 14px;
+    font-weight: 400; }
+
+hr.paymentHr {
+  border: 1px dashed #e4e4e4;
+  width: 95%;
+  float: right; }
+
+#galleryModal.modal.show .modal-dialog .modal-content {
+  border-radius: 0; }
+
+#modalPayment h5 {
+  font-family: MullerBold;
+  color: #050809;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px; }
+
+#modalPayment .modal-body .item .custom-control-label {
+  font-family: MullerMedium;
+  color: #afafb0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left; }
+  #modalPayment .modal-body .item .custom-control-label:hover {
+    cursor: pointer;
+    color: #151618; }
+
+#changeShop .modal-body .item .custom-control-label {
+  font-family: MullerMedium;
+  color: #afafb0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left; }
+  #changeShop .modal-body .item .custom-control-label:hover {
+    cursor: pointer;
+    color: #151618; }
+
+#changeShop h5 {
+  font-family: MullerBold;
+  color: #050809;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px; }
+
+#changeMenu .modal-body .item .custom-control-label {
+  font-family: MullerMedium;
+  color: #afafb0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left; }
+  #changeMenu .modal-body .item .custom-control-label:hover {
+    cursor: pointer;
+    color: #151618; }
+
+#changeMenu h5 {
+  font-family: MullerBold;
+  color: #050809;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px; }
+
+#warning .modal-body .item .custom-control-label {
+  font-family: MullerMedium;
+  color: #afafb0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left; }
+  #warning .modal-body .item .custom-control-label:hover {
+    cursor: pointer;
+    color: #151618; }
+
+#warning h5 {
+  font-family: MullerBold;
+  color: #050809;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px; }
+
+#warning h6 {
+  font-family: Europe;
+  color: #151618;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left; }
+
+.top-goods .carousel-caption {
+  right: 0;
+  left: 0;
+  top: 20px;
+  bottom: 0; }
+  .top-goods .carousel-caption .container {
+    height: 100%; }
+    .top-goods .carousel-caption .container .row {
+      height: 100%; }
+  .top-goods .carousel-caption .btn {
+    float: right; }
+
+.btn {
+  border-radius: 0;
+  font-family: MullerMedium; }
+
+p.lead {
+  font-family: Europe;
+  color: #141515;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify; }
+
+h2.title-in {
+  font-family: RuSbylyajka;
+  color: #fcc900;
+  font-size: 54.57px;
+  font-weight: 400;
+  text-align: justify;
+  -webkit-transform: scaleY(1.0445);
+  -ms-transform: scaleY(1.0445);
+  transform: scaleY(1.0445); }
+
+.works li {
+  font-family: Europe;
+  color: #000102;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: justify; }
+
+h4 {
+  font-family: MullerBold;
+  color: #141515;
+  font-size: 30px;
+  font-weight: 400; }
+
+h5 {
+  font-family: MullerBold;
+  color: #050809;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px; }
+
+.title-image-bg {
+  z-index: 2;
+  position: absolute;
+  margin-top: 45px; }
+
+.course .placeholder {
+  position: absolute;
+  z-index: 2;
+  bottom: 0; }
+  .course .placeholder h5 {
+    font-size: 10px;
+    font-family: MullerRegular;
+    padding-left: 8px;
+    color: #ffffff; }
+
+.course:hover .placeholder h5 {
+  display: none; }
+
+.course .course-img {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  overflow: hidden; }
+
+.course .course-img img {
+  width: 100%; }
+
+.course-img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #fdc900;
+  opacity: 0;
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity; }
+
+.course .course-img:hover:after {
+  opacity: 0.7; }
+
+.course .course-img .course-link-icon {
+  position: absolute;
+    position-cursor: pointer;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, calc(-50% - 15px));
+    -webkit-transform--ms-transform: translate(-50%, calc(-50% - 15px));
+    -webkit-transform-transform: translate(-50%, calc(-50% - 15px));
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  z-index: 10;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all; }
+
+.course-link-icon h5 {
+  color: #ffffff;
+  font-family: MullerBold; }
+
+.course .course-img:hover .course-link-icon {
+  -webkit-transform: translate(-50%, -50%);
+    -webkit-transform--ms-transform: translate(-50%, -50%);
+    -webkit-transform-transform: translate(-50%, -50%);
+  opacity: 1; }
+
+.course .course-title {
+  display: block;
+  height: 42px; }
+
+.course .course-details {
+  margin-top: 20px;
+  padding-top: 10px; }
+
+.course .course-details .course-price {
+  float: right; }
+
+.course .course-details .course-price.course-free {
+  color: green; }
+
+.course .course-details .course-price.course-premium {
+  color: #FF6700; }
+
+.about-video {
+  position: relative;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden; }
+
+a.about-video {
+  color: #000; }
+
+.about-video img {
+  width: 100%; }
+
+.about-video .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+    -webkit-transform--ms-transform: translate(-50%, -50%);
+      -webkit-transform--ms-transform-transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 24.027px;
+  z-index: 10;
+    z-index-color: #000000;
+  -webkit-animation: 2s play-animation infinite;
+    -webkit-animation-animation: 2s play-animation infinite;
+  -webkit-transition: 0.2s color;
+  -o-transition: 0.2s color;
+  transition: 0.2s color; }
+
+.about-video:hover .play-icon {
+  color: #FF6700; }
+
+@-webkit-keyframes play-animation {
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px #FFF;
+      -webkit-box-shadow-box-shadow: 0px 0px 0px 0px #FFF; }
+  to {
+    -webkit-box-shadow: 0px 0px 0px 10px transparent;
+      -webkit-box-shadow-box-shadow: 0px 0px 0px 10px transparent; } }
+
+@keyframes play-animation {
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px #FFF;
+      -webkit-box-shadow-box-shadow: 0px 0px 0px 0px #FFF; }
+  to {
+    -webkit-box-shadow: 0px 0px 0px 10px transparent;
+      -webkit-box-shadow-box-shadow: 0px 0px 0px 10px transparent; } }
+
+.about-video:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0; }
+
+table.contact-list {
+  table-layout: fixed; }
+  table.contact-list .row-name {
+    width: 25%;
+    font-family: MullerBold;
+    color: #141414;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1; }
+  table.contact-list .row-phone {
+    width: 60%;
+    text-align: center;
+    font-family: Europe;
+    color: #141414;
+    font-size: 16px;
+    font-weight: 400; }
+  table.contact-list .row-social {
+    width: 15%; }
+  table.contact-list .row-address {
+    font-family: Europe;
+    color: #141414;
+    font-size: 16px;
+    font-weight: 400; }
+
+.footer h4 {
+  font-family: MullerBold;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify; }
+
+.page-title h2 {
+  font-family: MullerBold;
+  color: #000102;
+  font-size: 30px;
+  font-weight: 400; }
+
+.page-title ul {
+  display: inline-block;
+  text-align: initial; }
+  .page-title ul li {
+    float: left;
+    margin-left: 25px;
+    list-style: none; }
+    .page-title ul li:first-child {
+      margin: 0;
+      list-style: none; }
+
+.time-order {
+  text-align: left;
+  border: 1px solid #fdc900;
+  padding: 5px;
+  font-family: MullerBold;
+  color: #000102;
+  font-size: 12px;
+  font-weight: 400; }
+
+.page-basket-title h2 {
+  font-family: MullerBold;
+  color: #000102;
+  font-size: 30px;
+  font-weight: 400; }
+
+.page-basket-title ul {
+  display: inline-block;
+  text-align: initial; }
+  .page-basket-title ul li {
+    float: left;
+    margin-left: 25px;
+    list-style: none; }
+    .page-basket-title ul li:first-child {
+      margin: 0;
+      list-style: none; }
+
+.basket-description h4 {
+  font-family: MullerBold;
+  color: #000102;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: justify; }
+
+.basket-description p {
+  font-family: Europe;
+  color: #000102;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justify; }
+
+.total ul {
+  display: inline-block;
+  text-align: initial; }
+  .total ul li {
+    float: left;
+    margin-left: 25px;
+    list-style: none; }
+    .total ul li:first-child {
+      margin: 0;
+      list-style: none; }
+
+.total h6 {
+  font-family: MullerRegular;
+  color: #000102;
+  font-size: 15px;
+  font-weight: 400; }
+
+.total h5 {
+  font-family: MullerBold;
+  color: #000102;
+  font-size: 15px;
+  font-weight: 400; }
+
+.prev-link:hover {
+  cursor: pointer; }
+
+.thankYou p {
+  font-family: Europe;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center; }
+
+.contract {
+  font-family: MullerRegular; }
+
+.modal.show .modal-dialog .modal-header {
+  border-bottom: 2px solid #FFC107; }
+
+.modal.show .modal-dialog .modal-content {
+  border-radius: 0;
+  border: 2px solid #FFC107; }
+
+#warning.modal.show .modal-dialog .modal-header {
+  border-bottom: 1px solid #7f7e7c; }
+
+#warning.modal.show .modal-dialog .modal-content {
+  border-radius: 0;
+  border: 1px solid #7f7e7c; }
+
+input:checked {
+  background-color: #FFC107; }
+
+html {
+  scroll-behavior: smooth; }
