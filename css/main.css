@@ -202,8 +202,9 @@ table.contact-list td {
   border-radius: 0; }
   .menu-item img {
     padding: 8px;
-    width: 136px;
-    height: 146px; }
+    width: auto;
+    height: 146px;
+    margin: 0 auto; }
   .menu-item h5.card-title {
     font-size: 16px;
     font-family: MullerBold;
@@ -220,8 +221,7 @@ table.contact-list td {
     z-index: 2;
     position: absolute; }
     .menu-item:hover p.description {
-      display: block;
-      height: 200px; }
+      display: block; }
   .menu-item span {
     font-size: 10px;
     color: #817f7d;
