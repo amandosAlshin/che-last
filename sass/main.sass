@@ -3,8 +3,27 @@
 body
   background-color: white
   overflow-x: hidden
-  padding: 10px 0
+.content
+  margin-top: 146px
+
+.opaque-navbar
+    background-color: #ffffff
+    transition: background-color .5s ease 0s
+.opaque-navbar.opaque
+    background-color: #ffffff
+    opacity: 0.8
+    transition: background-color .5s ease 0s
+    border-bottom: 1px solid #e1e1e1
+ul.header-gr
+  margin: 0
+  padding: 0
+  li
+    float: left
+    list-style: none
+    margin-left: 10px
 ul.nav
+  margin-top: 44px
+  margin-bottom: 10px
   li.nav-item
     a.nav-link
       font-family: MullerMedium
@@ -23,7 +42,13 @@ ul.nav
       background: transparent
       text-decoration: none
       border-bottom: 2px solid $yellow
-
+li.nav-item.active
+    a.nav-link
+      text-decoration: none
+      border-bottom: 2px solid $yellow
+      &:hover
+        text-decoration: none
+        border: none
 ul.social
   margin: 0
   padding: 0
@@ -94,13 +119,18 @@ table.contact-list td
     font-size: 12px
     line-height: 14px
     display: none
+    transition: opacity 1s ease-out
+    opacity: 0
+    height: 0
+    overflow: hidden
     font-family: MullerRegular
   &:hover
     cursor: pointer
     z-index: 2
     position: absolute
     p.description
-      display: block
+      opacity: 1
+      height: auto
   .card-footer
     overflow: hidden
     border-radius: 0
@@ -180,7 +210,6 @@ hr.paymentHr
     font-weight: 400
     line-height: 33px
 #modalPayment .modal-body .item .custom-control-label
-
   font-family: MullerMedium
   color:  #afafb0
   font-size: 14px
@@ -189,7 +218,6 @@ hr.paymentHr
   &:hover
     cursor: pointer
     color:  #151618
-
 #changeShop .modal-body .item .custom-control-label
   font-family: MullerMedium
   color:  #afafb0
@@ -548,10 +576,32 @@ table.contact-list
 
 #warning.modal.show .modal-dialog
   .modal-header
-    border-bottom: 1px solid rgb(127, 126, 124)
+    border-bottom: 1px solid #000000
   .modal-content
       border-radius: 0
-      border: 1px solid rgb(127, 126, 124)
+      border: 1px solid #000000
+
+.btn-dark
+    color: #fff
+    background-color: #000
+    border-color: #000
+.btn-dark:hover
+    color: #fff
+    background-color: #23272b
+    border-color: #1d2124
+
+.row.hover:hover
+  cursor: pointer
+#modalLetter.modal.show .modal-dialog
+  .modal-header
+    border-bottom: 1px solid #000000
+  .modal-content
+      border-radius: 0
+      border: 1px solid #000000
+.form-group
+  label
+    font-family: MullerBold
+    font-size: 14px
 input:checked
   background-color: #FFC107
 
