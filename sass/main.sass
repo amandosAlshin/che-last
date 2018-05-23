@@ -99,9 +99,14 @@ table.contact-list td
   &:hover
     cursor: pointer
 .menu-item
+  height: 340px
+  overflow: hidden
+
   border-radius: 0
   img
     padding: 8px
+    width: 136px
+    height: 146px
   h5.card-title
     font-size: 16px
     font-family: MullerBold
@@ -109,6 +114,16 @@ table.contact-list td
     letter-spacing: 2px
     line-height: 1
     text-align: left
+  &:hover
+    height: 510px
+    cursor: pointer
+    transition: width 1s, height 1s
+    -webkit-transition: width 1s, height 1s
+    z-index: 2
+    position: absolute
+    p.description
+      display: block
+      height: 200px
 
   span
     font-size: 10px
@@ -119,18 +134,8 @@ table.contact-list td
     font-size: 12px
     line-height: 14px
     display: none
-    transition: opacity 1s ease-out
-    opacity: 0
-    height: 0
-    overflow: hidden
     font-family: MullerRegular
-  &:hover
-    cursor: pointer
-    z-index: 2
-    position: absolute
-    p.description
-      opacity: 1
-      height: auto
+
   .card-footer
     overflow: hidden
     border-radius: 0
@@ -500,8 +505,9 @@ table.contact-list
   padding: 5px
   font-family: MullerBold
   color:  #000102
-  font-size: 12px
+  font-size: 13px
   font-weight: 400
+  letter-spacing: 2px
 .page-basket-title
   h2
     font-family: MullerBold

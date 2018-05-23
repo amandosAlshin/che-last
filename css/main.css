@@ -197,9 +197,13 @@ table.contact-list td {
     cursor: pointer; }
 
 .menu-item {
+  height: 340px;
+  overflow: hidden;
   border-radius: 0; }
   .menu-item img {
-    padding: 8px; }
+    padding: 8px;
+    width: 136px;
+    height: 146px; }
   .menu-item h5.card-title {
     font-size: 16px;
     font-family: MullerBold;
@@ -207,6 +211,17 @@ table.contact-list td {
     letter-spacing: 2px;
     line-height: 1;
     text-align: left; }
+  .menu-item:hover {
+    height: 510px;
+    cursor: pointer;
+    -o-transition: width 1s, height 1s;
+    transition: width 1s, height 1s;
+    -webkit-transition: width 1s, height 1s;
+    z-index: 2;
+    position: absolute; }
+    .menu-item:hover p.description {
+      display: block;
+      height: 200px; }
   .menu-item span {
     font-size: 10px;
     color: #817f7d;
@@ -216,20 +231,7 @@ table.contact-list td {
     font-size: 12px;
     line-height: 14px;
     display: none;
-    -webkit-transition: opacity 1s ease-out;
-    -o-transition: opacity 1s ease-out;
-    transition: opacity 1s ease-out;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
     font-family: MullerRegular; }
-  .menu-item:hover {
-    cursor: pointer;
-    z-index: 2;
-    position: absolute; }
-    .menu-item:hover p.description {
-      opacity: 1;
-      height: auto; }
   .menu-item .card-footer {
     overflow: hidden;
     border-radius: 0;
@@ -635,8 +637,9 @@ table.contact-list {
   padding: 5px;
   font-family: MullerBold;
   color: #000102;
-  font-size: 12px;
-  font-weight: 400; }
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px; }
 
 .page-basket-title h2 {
   font-family: MullerBold;
