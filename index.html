@@ -628,8 +628,12 @@
     <script type="text/javascript">jssor_1_slider_init();</script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('.scroll').click(function(){
-          event.preventDefault();
+        $('.scroll').click(function(e){
+          if(e.preventDefault){
+            e.preventDefault()
+          }else{
+            e.stop()
+          };
           var id = $(this).children('.nav-link').attr('href'),
               top = $(id).offset().top-106;
               console.log(top);
