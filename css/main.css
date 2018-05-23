@@ -94,17 +94,22 @@ body {
   margin-top: 146px; }
 
 .opaque-navbar {
+  padding-top: 44px;
   background-color: #ffffff;
-  -webkit-transition: background-color .5s ease 0s;
-  -o-transition: background-color .5s ease 0s;
-  transition: background-color .5s ease 0s; }
+  -webkit-transition: background-color 2s ease 0s;
+  -o-transition: background-color 2s ease 0s;
+  transition: background-color 2s ease 0s; }
 
 .opaque-navbar.opaque {
+  padding-top: 5px;
   background-color: #ffffff;
   opacity: 0.8;
-  -webkit-transition: background-color .5s ease 0s;
-  -o-transition: background-color .5s ease 0s;
-  transition: background-color .5s ease 0s;
+  -webkit-transition: padding-top 2s;
+  -o-transition: padding-top 2s;
+  transition: padding-top 2s;
+  -webkit-transition: background-color 2s ease 0s;
+  -o-transition: background-color 2s ease 0s;
+  transition: background-color 2s ease 0s;
   border-bottom: 1px solid #e1e1e1; }
 
 ul.header-gr {
@@ -116,7 +121,6 @@ ul.header-gr {
     margin-left: 10px; }
 
 ul.nav {
-  margin-top: 44px;
   margin-bottom: 10px; }
   ul.nav li.nav-item a.nav-link {
     font-family: MullerMedium;

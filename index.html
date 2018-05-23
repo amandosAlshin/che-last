@@ -284,8 +284,8 @@
             <li class="nav-item scroll">
               <a class="nav-link" href="#abaut">О CHE</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="modal" data-target="#changeMenu" href="javascript:;">МЕНЮ  ПАБА</a>
+            <li class="nav-item scroll">
+              <a class="nav-link" href="#topMenu">МЕНЮ  ПАБА</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="modal" data-target="#changeShop" href="javascript:;">ДОСТАВКА</a>
@@ -341,7 +341,7 @@
         </div>
       </div>
       <br />
-      <div class="container">
+      <div id="topMenu" class="container">
         <div class="row carousel slide top-goods"  data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -353,7 +353,7 @@
                         <h4 style="text-align: left">ПОПУЛЯРНЫЕ <br /> БЛЮДА <img src="img/next.png" alt="next"></h4>
                       </div>
                       <div class="col align-self-end">
-                        <button type="button" class="btn btn-dark"><img style="width:42px" src="img/next.png" alt="next">&nbsp&nbspСМОТРЕТЬ ВСЕ МЕНЮ</button>
+                        <button data-toggle="modal" data-target="#changeMenu"  type="button" class="btn btn-dark"><img style="width:42px" src="img/next.png" alt="next">&nbsp&nbspСМОТРЕТЬ ВСЕ МЕНЮ</button>
                       </div>
                     </div>
                   </div>
@@ -631,7 +631,8 @@
         $('.scroll').click(function(){
           event.preventDefault();
           var id = $(this).children('.nav-link').attr('href'),
-              top = $(id).offset().top-60;
+              top = $(id).offset().top-120;
+              console.log(top);
               console.log(id);
           $('.nav-item').removeClass('active');
           $(this).addClass('active');
