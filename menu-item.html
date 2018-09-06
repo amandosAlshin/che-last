@@ -10,6 +10,320 @@
     <link rel="stylesheet" href="css/main.css" >
   </head>
   <body>
+    <div class="modal fade" id="modalPayment" tabindex="-1" role="dialog" aria-labelledby="modalPaymentLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="width: 100%" class="row align-items-center">
+              <div class="col-xl-8">
+                <h5 class="modal-title" id="modalPayment">ВЫБЕРИТЕ <br/>СПОСОБ ОПЛАТЫ <img style="width:48px;height:15px;" src="img/next.png" alt=""></h5>
+              </div>
+              <div style="text-align: right" class="col-xl-2">
+                <img src="img/che.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="custom-control item custom-radio">
+              <input onclick="paymentType(1)" type="radio" class="custom-control-input" id="cardPayment"  name="radio-stacked">
+              <label class="custom-control-label" for="cardPayment">БАНКОВСКАЯ КАРТА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="paymentType(2)" type="radio" class="custom-control-input" id="cashPayment" name="radio-stacked">
+              <label class="custom-control-label" for="cashPayment">НАЛИЧНЫМИ КУРЬЕРУ</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="changeReserve" tabindex="-1" role="dialog" aria-labelledby="changeReserveLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="width: 100%" class="row align-items-center">
+              <div class="col-xl-8">
+                <h5 class="modal-title" id="changeReserve">ВЫБЕРИТЕ <br/>ВАШ ЛЮБИМЫЙ ЧЕЧИЛ <img style="width:48px;height:15px;" src="img/next.png" alt=""></h5>
+              </div>
+              <div style="text-align: right" class="col-xl-1 title-img">
+                <img src="img/che.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="custom-control item custom-radio">
+              <input onclick="changeReserve(1)" type="radio" class="custom-control-input" id="saryArkaChange"  name="radio-stacked">
+              <label class="custom-control-label" for="saryArka">САРЫ-АРКА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeReserve(2)" type="radio" class="custom-control-input" id="rozibakievaChange" name="radio-stacked">
+              <label class="custom-control-label" for="rozibakieva">РОЗЫБАКИЕВА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeReserve(3)" type="radio" class="custom-control-input" id="jarokovaChange" name="radio-stacked">
+              <label class="custom-control-label" for="jarokova">ЖАРОКОВА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeReserve(4)" type="radio" class="custom-control-input" id="tolebaevaChange" name="radio-stacked">
+              <label class="custom-control-label" for="tolebaeva">ТУЛЕБАЕВА</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="changeShop" tabindex="-1" role="dialog" aria-labelledby="changeShopLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="width: 100%" class="row align-items-center">
+              <div class="col-xl-8">
+                <h5 class="modal-title" id="changeShop">ВЫБЕРИТЕ <br/>ВАШ ЛЮБИМЫЙ ЧЕЧИЛ <img style="width:48px;height:15px;" src="img/next.png" alt=""></h5>
+              </div>
+              <div style="text-align: right" class="col-xl-1 title-img">
+                <img src="img/che.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="custom-control item custom-radio">
+              <input type="hidden" id="urlShop"/>
+              <input onclick="changeShop(1)" type="radio" class="custom-control-input" id="saryArka"  name="radio-stacked">
+              <label class="custom-control-label" for="saryArka">САРЫ-АРКА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeShop(2)" type="radio" class="custom-control-input" id="rozibakieva" name="radio-stacked">
+              <label class="custom-control-label" for="rozibakieva">РОЗЫБАКИЕВА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeShop(3)" type="radio" class="custom-control-input" id="jarokova" name="radio-stacked">
+              <label class="custom-control-label" for="jarokova">ЖАРОКОВА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeShop(4)" type="radio" class="custom-control-input" id="tolebaeva" name="radio-stacked">
+              <label class="custom-control-label" for="tolebaeva">ТУЛЕБАЕВА</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="changeMenu" tabindex="-1" role="dialog" aria-labelledby="changeMenuLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="width: 100%" class="row align-items-center">
+              <div class="col-xl-8">
+                <h5 class="modal-title" id="changeMenu">ВЫБЕРИТЕ <br/>ВАШ ЛЮБИМЫЙ ЧЕЧИЛ <img style="width:48px;height:15px;" src="img/next.png" alt=""></h5>
+              </div>
+              <div style="text-align: right" class="col-xl-1 title-img">
+                <img src="img/che.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="custom-control item custom-radio">
+              <input onclick="changeMenuLink(1)" type="radio" class="custom-control-input" id="menuSaryArka"  name="radio-menu">
+              <label class="custom-control-label" for="menuSaryArka">МЕНЮ САРЫ-АРКА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeMenuLink(2)" type="radio" class="custom-control-input" id="menuRozibakieva" name="radio-menu">
+              <label class="custom-control-label" for="menuRozibakieva">МЕНЮ РОЗЫБАКИЕВА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeMenuLink(3)" type="radio" class="custom-control-input" id="menuJarokova" name="radio-menu">
+              <label class="custom-control-label" for="menuJarokova">МЕНЮ ЖАРОКОВА</label>
+            </div>
+            <hr class="paymentHr"/>
+            <div style="clear: both" class="custom-control item custom-radio">
+              <input onclick="changeMenuLink(4)" type="radio" class="custom-control-input" id="menuTolebaeva" name="radio-menu">
+              <label class="custom-control-label" for="menuTolebaeva">МЕНЮ ТУЛЕБАЕВА</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  class="modal fade bd-example-modal-lg" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:680px;overflow:hidden;visibility:hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                  <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+              </div>
+              <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:580px;overflow:hidden;">
+                  <div>
+                      <img data-u="image" src="img/slider/031.jpg" />
+                      <div class="captionOneSlider">1 -ый этаж</div>
+                      <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                      <img data-u="thumb" src="img/slider/031-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/021.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/021-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/022.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/022-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/023.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/023-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/024.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/024-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/025.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/025-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/026.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/026-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/027.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/027-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/028.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/028-s200x100.jpg" />
+                  </div>
+                  <div>
+                    <img data-u="image" src="img/slider/029.jpg" />
+                    <div class="captionOneSlider">1 -ый этаж</div>
+                    <div class="captionTwoSlider">НА ПЕРВОМ ЭТАЖЕ УДАЧНО РАСПОЛОЖИЛИСЬ ЗОНЫ ДЛЯ БОЛЬШИХ КОМПАНИЙ, ГДЕ МЫ ПРЕДЛАГАЕМ ОТМЕТИТЬ ВАШ ПРАЗДНИК</div>
+                    <img data-u="thumb" src="img/slider/029-s200x100.jpg" />
+                  </div>
+              </div>
+              <!-- Thumbnail Navigator -->
+              <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;bottom:0px;width:980px;height:200px;background-color:#FFC107;" data-autocenter="1" data-scale-bottom="0.75">
+                  <div data-u="slides">
+                      <div data-u="prototype" class="p" style="width:190px;height:190px;">
+                          <div data-u="thumbnailtemplate" class="t"></div>
+                          <svg viewbox="0 0 16000 16000" class="cv">
+                              <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                              <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                              <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                          </svg>
+                      </div>
+                  </div>
+              </div>
+              <!-- Arrow Navigator -->
+              <div data-u="arrowleft" class="jssora106" style="width:55px;height:55px;top:162px;left:30px;" data-scale="0.75">
+                  <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                      <circle class="c" cx="8000" cy="8000" r="6260.9"></circle>
+                      <polyline class="a" points="7930.4,5495.7 5426.1,8000 7930.4,10504.3 "></polyline>
+                      <line class="a" x1="10573.9" y1="8000" x2="5426.1" y2="8000"></line>
+                  </svg>
+              </div>
+              <div data-u="arrowright" class="jssora106" style="width:55px;height:55px;top:162px;right:30px;" data-scale="0.75">
+                  <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                      <circle class="c" cx="8000" cy="8000" r="6260.9"></circle>
+                      <polyline class="a" points="8069.6,5495.7 10573.9,8000 8069.6,10504.3 "></polyline>
+                      <line class="a" x1="5426.1" y1="8000" x2="10573.9" y2="8000"></line>
+                  </svg>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" id="modalLetter" tabindex="-1" role="dialog" aria-labelledby="modalLetterLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="width: 100%" class="row align-items-center">
+              <div class="col-xl-9">
+                <ul class="header-gr">
+                  <li><h5 class="modal-title" id="modalLetter">НАПИШИ ЧЕ!</h5></li>
+                  <li><img style="width:42px;height:12px;" src="img/next.png" alt=""></li>
+                  <li><img style="width: 58px; height: 34px;"src="img/che.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div class="modal-body">
+              <div class="form-group">
+                <label for="name">Имя*</label>
+                <input type="email" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Введите Ваше имя">
+              </div>
+              <div class="form-group">
+                <label for="email">Э-почта*</label>
+                <input type="password" class="form-control" id="email" placeholder="Введите Вашу э-почту">
+              </div>
+              <div class="form-group">
+                <label for="letter">Сообщение*</label>
+                <textarea class="form-control" id="letter" rows="3" placeholder="Введите текст сообщения"></textarea>
+              </div>
+              <div class="row justify-content-end">
+                <div class="col-xl-3">
+                  <button style="width: 100%" type="button" class="btn btn-outline-dark">Отмена</button>
+                </div>
+                <div class="col-xl-3">
+                  <button style="width: 100%" type="button" class="btn btn-warning">Отправить</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="warningLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="width: 100%" class="row align-items-center">
+              <div class="col-md-8">
+                <h5 class="modal-title" id="warning">ЧЕ ПРЕДУПРЕЖДАЕТ <img style="width:48px;height:15px;" src="img/next.png" alt=""></h5>
+              </div>
+              <div style="text-align: right" class="col-md-2">
+                <img src="img/che.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <h6>
+              Покидая эту страницу,<br />
+              ваша корзина обнулится :(
+            </h6>
+            <br/>
+            <div class="row">
+              <div class="col-md-3">
+                <button style="width: 100%" type="button" class="btn btn-outline-warning">Ok</button>
+              </div>
+              <div class="col-md-3">
+                <button style="width: 100%" type="button" class="btn btn-outline-dark">Отмена</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="warningLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -43,742 +357,758 @@
     </div>
     <div id="mySidenav" class="sidenav">
       <!--<img style="width: 58px; height: 34px;"src="img/che.png" alt="">-->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">Главная</a>
-      <a href="#">Основные блюда</a>
-      <a href="#">Закуски</a>
-      <a href="#">Супы</a>
-      <a href="#">Салаты</a>
-      <a href="#">Пицца</a>
-      <a href="#">Десерт</a>
+      <div class="row justify-content-between align-items-center">
+        <div class="col-xl-6">
+            <img style="width: 58px; height: 34px;" src="img/che-tr.png" alt="">
+        </div>
+        <div style="text-align: right" class="col-xl-4">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <a href="#">МЕНЮ ДОСТАВКИ</a>
+          <a href="#">Основные блюда</a>
+          <a href="#">Закуски</a>
+          <a href="#">Супы</a>
+          <a href="#">Салаты</a>
+          <a href="#">Пицца</a>
+          <a href="#">Десерт</a>
+          <a href="#">Закуски</a>
+          <a href="#">Пицца</a>
+          <a href="#">Десерт</a>
+        </div>
+      </div>
     </div>
-    <div class="main">
+    <div class="main-bg"></div>
+    <div class="container">
+      <nav class="fixed-top opaque-navbar navbar navbar-expand-lg navbar-light ">
+          <button id="ChangeToggle" class="mobil navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <div id="navbar-hamburger" >
+              <span class="navbar-toggler-icon"></span><i class=""></i>
+            </div>
+            <div id="navbar-close" class="hidden">
+              <i class="far fa-times-circle"></i>
+            </div>
+          </button>
+          <a class="mobil navbar-brand" href="#"><img src="img/logo-tablet.png" alt="" /></a>
+          <a class="mobil" href="contract.html"><img src="img/basket.png" alt="" /></a>
+          <div class=" collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="mobil navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item scroll">
+                <a class="nav-link" href="#abaut">О CHE</a>
+              </li>
+              <li class="nav-item scroll">
+                <a class="nav-link" href="#topMenu">МЕНЮ  ПАБА</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#changeShop" href="javascript:;">ДОСТАВКА</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">БРОНЬ</a>
+              </li>
+              <li class="nav-item scroll">
+                <a class="nav-link" href="#gallery">ГАЛЕРЕЯ</a>
+              </li>
+              <li class="nav-item scroll">
+                <a class="nav-link" href="#shirts">ФУТБОЛКИ</a>
+              </li>
+              <li class="nav-item scroll">
+                <a class="nav-link" href="#contact">КОНТАКТЫ</a>
+              </li>
+            </ul>
+            <ul class="nav desktop  container nav-fill nav-pills align-items-center">
+              <li class="nav-item">
+                <img src="img/star.png" alt="" />
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#abaut">О CHE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#topMenu">МЕНЮ  ПАБА</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#changeShop" href="javascript:;">ДОСТАВКА</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">БРОНЬ</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html"><img src="img/logo.png" alt="" /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#gallery">ГАЛЕРЕЯ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#shirts">ФУТБОЛКИ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#contact">КОНТАКТЫ</a>
+              </li>
+              <li class="nav-item">
+                <a href="basket.html"><img src="img/basket.png" alt="" /></a>
+              </li>
+              <li class="nav-item">
+                    <img src="img/star.png" alt="" />
+                  </li>
+            </ul>
+          </div>
+      </nav>
+    </div>
+    <br />
+    <br />
+    <div class="content">
+      <div class="container ">
+          <div class="row desktop justify-content-between">
+            <div class="col-md-4">
+              <a href="menu.html"><img src="img/prev-gray.png" alt=""></a>
+            </div>
+            <div class="col-md-4">
+              <div class="phone-delivery"></div>
+            </div>
+          </div>
+          <div  class="row desktop align-items-center page-title">
+            <div class="col-md-1">
+              <img onclick="openNav()" style="width: 35px; height: 25px;"src="img/burger.png" alt="">
+            </div>
+            <div class="col-md-2">
+              <img src="img/meat.png" alt="">
+            </div>
+            <div style="text-align: center" class="col-md-5">
+              <ul>
+                <li><img src="img/star-gray.png" alt=""></li>
+                <li><h2>МЯСНЫЕ БЛЮДА</h2></li>
+                <li><img src="img/star-gray.png" alt=""></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <div class="time-order" style="">
+                ПРИНИМАЕМ  ЗАКАЗЫ<br />
+                С 14:00 ДО 23:00
+              </div>
+            </div>
+          </div>
+          <div class="row mobil align-items-center page-title">
+            <div style="text-align: center" class="col-md-10">
+              <ul>
+                <li><img src="img/star-gray.png" alt=""></li>
+                <li><h2>МЯСНЫЕ БЛЮДА</h2></li>
+                <li><img src="img/star-gray.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <br /><br />
+          <div class="row item-row">
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div  class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card menu-item" >
+                <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
+                  <span>250/150/100 гр.</span>
+                  <p class="description">
+                    Фарш из говядины
+                    обжаренный со сладким
+                    перцем, кусочками
+                    чеснока, сельдереем,
+                    заправлятся соусом
+                    из помидор, красной
+                    и белой фасолью,
+                    сладкой кукурузой
+                    и перцем халапеньо.
+                    Подается с чипсами
+                    из пшеничного лаваша,
+                    сметаной, халапеньо
+                    и сыром чеддер.
+                  </p>
+                  <h5>3024 тг</h5>
+                </div>
+                <div class="card-footer bg-transparent border-default">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-dark">Вкусить</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <button type="button" class="btn btn-outline-dark">0</button>
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="row mobil justify-content-md-center page-title">
+            <div class="col-md-4">
+              <div class="time-order" style="">
+                ПРИНИМАЕМ  ЗАКАЗЫ<br />
+                С 14:00 ДО 23:00
+              </div>
+            </div>
+          </div>
+      </div>
+      <hr />
       <div class="container">
-        <nav class="fixed-top opaque-navbar navbar navbar-expand-lg navbar-light ">
-            <button id="ChangeToggle" class="mobil navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-              <div id="navbar-hamburger" >
-                <span class="navbar-toggler-icon"></span><i class=""></i>
-              </div>
-              <div id="navbar-close" class="hidden">
-                <i class="far fa-times-circle"></i>
-              </div>
-            </button>
-            <a class="mobil navbar-brand" href="#"><img src="img/logo-tablet.png" alt="" /></a>
-            <a class="mobil" href="contract.html"><img src="img/basket.png" alt="" /></a>
-            <div class=" collapse navbar-collapse" id="navbarTogglerDemo03">
-              <ul class="mobil navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#abaut">О CHE</a>
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#topMenu">МЕНЮ  ПАБА</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="modal" data-target="#changeShop" href="javascript:;">ДОСТАВКА</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">БРОНЬ</a>
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#gallery">ГАЛЕРЕЯ</a>
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#shirts">ФУТБОЛКИ</a>
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#contact">КОНТАКТЫ</a>
-                </li>
-              </ul>
-              <ul class="nav desktop  container nav-fill nav-pills align-items-center">
-                <li class="nav-item">
-                  <img src="img/star.png" alt="" />
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#abaut">О CHE</a>
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#topMenu">МЕНЮ  ПАБА</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="modal" data-target="#changeShop" href="javascript:;">ДОСТАВКА</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">БРОНЬ</a>
-                </li>
-                <li class="nav-item">
-                  <img src="img/logo.png" alt="" />
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#gallery">ГАЛЕРЕЯ</a>
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#shirts">ФУТБОЛКИ</a>
-                </li>
-                <li class="nav-item scroll">
-                  <a class="nav-link" href="#contact">КОНТАКТЫ</a>
-                </li>
-                <li class="nav-item">
-                  <a href="contract.html"><img src="img/basket.png" alt="" /></a>
-                </li>
-                <li class="nav-item">
-                      <img src="img/star.png" alt="" />
-                    </li>
-              </ul>
-            </div>
-        </nav>
-      </div>
-      <br />
-      <br />
-      <div class="content">
-        <div class="container ">
-            <div class="row prev-link">
-              <div class="col-md-10">
-                <a href="menu.html"><img src="img/prev-gray.png" alt=""></a>
-              </div>
-            </div>
-            <div  class="row desktop align-items-center page-title">
-              <div class="col-md-1">
-                <img onclick="openNav()" style="width: 35px; height: 25px;"src="img/burger.png" alt="">
-              </div>
-              <div class="col-md-2">
-                <img src="img/meat.png" alt="">
-              </div>
-              <div style="text-align: center" class="col-md-5">
-                <ul>
-                  <li><img src="img/star-gray.png" alt=""></li>
-                  <li><h2>МЯСНЫЕ БЛЮДА</h2></li>
-                  <li><img src="img/star-gray.png" alt=""></li>
-                </ul>
-              </div>
-              <div class="col-md-2">
-                <div class="time-order" style="">
-                  ПРИНИМАЕМ  ЗАКАЗЫ<br />
-                  С 14:00 ДО 23:00
-                </div>
-              </div>
-            </div>
-            <div class="row mobil align-items-center page-title">
-              <div style="text-align: center" class="col-md-10">
-                <ul>
-                  <li><img src="img/star-gray.png" alt=""></li>
-                  <li><h2>МЯСНЫЕ БЛЮДА</h2></li>
-                  <li><img src="img/star-gray.png" alt=""></li>
-                </ul>
-              </div>
-            </div>
-            <br /><br />
-            <div class="row item-row">
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div  class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card menu-item" >
-                  <img class="card-img-top" src="img/menu-item.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">МЯСНОЕ ЧИЛИ С ЧИПСАМИ</h5>
-                    <span>250/150/100 гр.</span>
-                    <p class="description">
-                      Фарш из говядины
-                      обжаренный со сладким
-                      перцем, кусочками
-                      чеснока, сельдереем,
-                      заправлятся соусом
-                      из помидор, красной
-                      и белой фасолью,
-                      сладкой кукурузой
-                      и перцем халапеньо.
-                      Подается с чипсами
-                      из пшеничного лаваша,
-                      сметаной, халапеньо
-                      и сыром чеддер.
-                    </p>
-                    <h5>3024 тг</h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-default">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-dark">Вкусить</button>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-outline-dark">-</button>
-                          <button type="button" class="btn btn-outline-dark">0</button>
-                          <button type="button" class="btn btn-outline-dark">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-            <div class="row mobil justify-content-md-center page-title">
-              <div class="col-md-4">
-                <div class="time-order" style="">
-                  ПРИНИМАЕМ  ЗАКАЗЫ<br />
-                  С 14:00 ДО 23:00
-                </div>
-              </div>
-            </div>
+      <div class="row footer align-items-center">
+        <div class="col-md-4">
+          <img src="img/letter-footer.png" alt="" />
         </div>
-        <hr />
-        <div class="container">
-        <div class="row footer align-items-center">
-          <div class="col-md-4">
-            <img src="img/letter-footer.png" alt="" />
-          </div>
-          <div class="col-md-6">
-            <h4>NAPISHI.CHE<span style="color: #fdc900">@</span>GMAIL.COM</h4>
-          </div>
+        <div class="col-md-6">
+          <h4>NAPISHI.CHE<span style="color: #fdc900">@</span>GMAIL.COM</h4>
         </div>
-      </div>
       </div>
     </div>
+    </div>
+
     <script src="js/jquery-slim.min.js"></script>
-    <script type="text/javascript">jssor_1_slider_init();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -854,14 +1184,12 @@
     <script>
       function openNav() {
           document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+          document.getElementsByClassName("main-bg")[0].style.display = "block";
       }
 
       function closeNav() {
           document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-          document.body.style.backgroundColor = "white";
+          document.getElementsByClassName("main-bg")[0].style.display = "none";
       }
     </script>
   </body>

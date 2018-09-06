@@ -48,7 +48,7 @@
           <div class="modal-header">
             <div style="width: 100%" class="row align-items-center">
               <div class="col-xl-8">
-                <h5 class="modal-title" id="changeShop">ВЫБЕРИТЕ <br/>ВАШ ЛЮБИМЫЙ ЧЕЧИЛ <img style="width:48px;height:15px;" src="img/next.png" alt=""></h5>
+                <h5 class="modal-title" id="changeReserve">ВЫБЕРИТЕ <br/>ВАШ ЛЮБИМЫЙ ЧЕЧИЛ <img style="width:48px;height:15px;" src="img/next.png" alt=""></h5>
               </div>
               <div style="text-align: right" class="col-xl-1 title-img">
                 <img src="img/che.png" alt="">
@@ -57,23 +57,22 @@
           </div>
           <div class="modal-body">
             <div class="custom-control item custom-radio">
-              <input type="hidden" id="urlShop"/>
-              <input onclick="changeReserve(1)" type="radio" class="custom-control-input" id="saryArka"  name="radio-stacked">
+              <input onclick="changeReserve(1)" type="radio" class="custom-control-input" id="saryArkaChange"  name="radio-stacked">
               <label class="custom-control-label" for="saryArka">САРЫ-АРКА</label>
             </div>
             <hr class="paymentHr"/>
             <div style="clear: both" class="custom-control item custom-radio">
-              <input onclick="changeReserve(2)" type="radio" class="custom-control-input" id="rozibakieva" name="radio-stacked">
+              <input onclick="changeReserve(2)" type="radio" class="custom-control-input" id="rozibakievaChange" name="radio-stacked">
               <label class="custom-control-label" for="rozibakieva">РОЗЫБАКИЕВА</label>
             </div>
             <hr class="paymentHr"/>
             <div style="clear: both" class="custom-control item custom-radio">
-              <input onclick="changeReserve(3)" type="radio" class="custom-control-input" id="jarokova" name="radio-stacked">
+              <input onclick="changeReserve(3)" type="radio" class="custom-control-input" id="jarokovaChange" name="radio-stacked">
               <label class="custom-control-label" for="jarokova">ЖАРОКОВА</label>
             </div>
             <hr class="paymentHr"/>
             <div style="clear: both" class="custom-control item custom-radio">
-              <input onclick="changeReserve(4)" type="radio" class="custom-control-input" id="tolebaeva" name="radio-stacked">
+              <input onclick="changeReserve(4)" type="radio" class="custom-control-input" id="tolebaevaChange" name="radio-stacked">
               <label class="custom-control-label" for="tolebaeva">ТУЛЕБАЕВА</label>
             </div>
           </div>
@@ -352,7 +351,7 @@
                 <a class="nav-link" data-toggle="modal" data-target="#changeReserve" href="javascript:;">БРОНЬ</a>
               </li>
               <li class="nav-item">
-                <img src="img/logo.png" alt="" />
+                <a href="index.html"><img src="img/logo.png" alt="" /></a>
               </li>
               <li class="nav-item scroll">
                 <a class="nav-link" href="#gallery">ГАЛЕРЕЯ</a>
@@ -364,7 +363,7 @@
                 <a class="nav-link" href="#contact">КОНТАКТЫ</a>
               </li>
               <li class="nav-item">
-                <a href="contract.html" role="button"  class="btn btn-warning" name="button"><img src="img/basket.png" alt="" /> 280 000</a>
+                <a href="basket.html" role="button"  class="btn btn-warning" name="button"><img src="img/basket.png" alt="" /> 280 000</a>
               </li>
               <li class="nav-item">
                     <img src="img/star.png" alt="" />
@@ -824,6 +823,7 @@
             </div>
             <div style="text-align: right" class="col-md-5">
               <div class="form-shirts"></div>
+                <button data-toggle="modal" data-target="#modalLetter"  type="button" class="btn btn-dark"><img style="width:42px" src="img/next.png" alt="next">&nbsp&nbspНАПИСАТЬ</button>
             </div>
           </div>
         </div>
